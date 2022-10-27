@@ -68,7 +68,7 @@
                 //// Enter your own bot information if using the existing bot. ////
                 // "botId": "",
                 // "botPassword": "", // use plain text or environment variable reference like ${env:BOT_PASSWORD}
-                "botMessagingEndpoint": "https://${env:CODESPACE_NAME}-3978.preview.app.github.dev/api/messages" // use your own routing "/any/path", or full URL "https://contoso.com/any/path"
+                "botMessagingEndpoint": "<Put forwarded public url for localhost:3978 here, example: https://username-appname-codespaces-qrrx9wwvrvfjq4-3978.preview.app.github.dev/api/messages>" // use your own routing "/any/path", or full URL "https://contoso.com/any/path"
             }
         },
         {
