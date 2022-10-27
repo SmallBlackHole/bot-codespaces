@@ -9,10 +9,11 @@
             "dependsOn": [
                 "Validate & install prerequisites",
                 "Install npm packages",
-                "Setup port forwarding",
+                // "Setup port forwarding", // Comment out this if running locally
                 "Set up bot",
                 "Build & upload Teams manifest",
-                "Start services"
+                "Start services",
+                "Open Teams Web Client"
             ],
             "dependsOrder": "sequence"
         },
@@ -26,7 +27,6 @@
                 "prerequisites": [
                     "nodejs", // Validate if Node.js is installed.
                     "m365Account", // Sign-in prompt for Microsoft 365 account, then validate if the account enables the sideloading permission.
-                    // "ngrok", // Install Ngrok. Bot project requires a public message endpoint, and ngrok can help create public tunnel for your local service.
                     "portOccupancy" // Validate available ports to ensure those debug ones are not occupied.
                 ],
                 "portOccupancy": [
@@ -111,6 +111,11 @@
                     "endsPattern": "restify listening to|Bot/ME service listening at|[nodemon] app crashed"
                 }
             }
+        },
+        {
+            "type": "shell",
+            "label": "Open Teams Web Client",
+            "command": "bash ${workspaceFolder}/.fx/open-browser.sh",
         }
     ]
 }
