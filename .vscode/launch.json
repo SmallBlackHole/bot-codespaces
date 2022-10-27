@@ -8,7 +8,7 @@
             "url": "https://teams.microsoft.com/l/app/${teamsAppId}?installAppPackage=true&webjoin=true&${account-hint}",
             "presentation": {
                 "group": "remote",
-                "order": 1
+                "order": 2
             },
             "internalConsoleOptions": "neverOpen"
         },
@@ -19,7 +19,7 @@
             "url": "https://teams.microsoft.com/l/app/${teamsAppId}?installAppPackage=true&webjoin=true&${account-hint}",
             "presentation": {
                 "group": "remote",
-                "order": 2
+                "order": 1
             },
             "internalConsoleOptions": "neverOpen"
         },
@@ -68,26 +68,24 @@
         {
             "name": "Debug (Edge)",
             "configurations": [
-                "Launch Bot (Edge)",
-                "Attach to Bot"
-            ],
-            "preLaunchTask": "Start Teams App Locally",
-            "presentation": {
-                "group": "all",
-                "order": 1
-            },
-            "stopAll": true
-        },
-        {
-            "name": "Debug (Chrome)",
-            "configurations": [
-                "Launch Bot (Chrome)",
                 "Attach to Bot"
             ],
             "preLaunchTask": "Start Teams App Locally",
             "presentation": {
                 "group": "all",
                 "order": 2
+            },
+            "stopAll": true
+        },
+        {
+            "name": "Debug (Chrome)",
+            "configurations": [
+                "Attach to Bot"
+            ],
+            "preLaunchTask": "Start Teams App Locally",
+            "presentation": {
+                "group": "all",
+                "order": 1
             },
             "stopAll": true
         }
