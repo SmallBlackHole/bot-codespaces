@@ -117,7 +117,7 @@
             "label": "Open Teams Web Client",
             "command": "node ${workspaceFolder}/.fx/open-browser.js",
             "options": {
-                "cwd": "${workspaceFolder}"
+                "cwd": "${workspaceFolder}/bot"
             }
         }
     ]
