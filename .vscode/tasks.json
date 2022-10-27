@@ -9,7 +9,7 @@
             "dependsOn": [
                 "Validate & install prerequisites",
                 "Install npm packages",
-                // "Setup port forwarding", // Comment out this if running locally
+                "Setup port forwarding", // Comment out this if running locally
                 "Set up bot",
                 "Build & upload Teams manifest",
                 "Start services",
@@ -115,7 +115,10 @@
         {
             "type": "shell",
             "label": "Open Teams Web Client",
-            "command": "bash ${workspaceFolder}/.fx/open-browser.sh",
+            "command": "node ${workspaceFolder}/.fx/open-browser.js",
+            "options": {
+                "cwd": "${workspaceFolder}"
+            }
         }
     ]
 }
