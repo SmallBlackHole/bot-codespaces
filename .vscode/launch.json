@@ -66,6 +66,18 @@
     ],
     "compounds": [
         {
+            "name": "Debug (Codespaces)",
+            "configurations": [
+                "Attach to Bot"
+            ],
+            "preLaunchTask": "Start Teams App Locally",
+            "presentation": {
+                "group": "all",
+                "order": 0
+            },
+            "stopAll": true
+        },
+        {
             "name": "Debug (Edge)",
             "configurations": [
                 "Launch Bot (Edge)",
