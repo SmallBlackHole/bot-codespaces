@@ -8,10 +8,11 @@
             "label": "Start Teams App Locally",
             "dependsOn": [
                 "Validate prerequisites",
-                "Start local tunnel",
+                // "Start local tunnel",
                 "Create resources",
                 "Build project",
-                "Start application"
+                "Start application",
+                "Open Teams Web Client"
             ],
             "dependsOrder": "sequence"
         },
@@ -105,6 +106,14 @@
                     "beginsPattern": "[nodemon] starting",
                     "endsPattern": "restify listening to|Bot/ME service listening at|[nodemon] app crashed"
                 }
+            }
+        },
+        {
+            "type": "shell",
+            "label": "Open Teams Web Client",
+            "command": "node ${workspaceFolder}/.vscode/openbrowser.js",
+            "options": {
+                "cwd": "${workspaceFolder}"
             }
         }
     ]
