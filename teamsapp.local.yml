@@ -21,7 +21,7 @@ provision:
     with:
       botId: ${{BOT_ID}}
       name: bot-codespaces-v3
-      messagingEndpoint: ${{BOT_ENDPOINT}}/api/messages
+      messagingEndpoint: https://qinezh-vigilant-eureka-69wv49g7pwq3qp7-3978.preview.app.github.dev/api/messages
       description: ""
       channels:
         - name: msteams
